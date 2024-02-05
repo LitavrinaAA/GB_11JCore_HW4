@@ -4,6 +4,7 @@ import exceptions.QuantityException;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws CustomerNotExistException, ProductNotExistException, QuantityException {
@@ -42,6 +43,27 @@ public class Main {
         System.out.println(OnlineShop.getOrderList());
         System.out.println(OnlineShop.getOrderList().size() + " orders received");
 
+    }
+
+    public static String ongratulations(List<Customer> customers) {
+        String ongratulations = null;
+
+        Holidays holiday = Holidays.isHoliday(LocalDate.now());
+        switch (holiday) {
+            case MARCH8:
+                ongratulations = "С 8 марта!";
+                break;
+            case FEB23:
+                ongratulations = "С 23 февраля!";
+                break;
+            case NEWYEAR:
+                ongratulations = "С Новым годом!";
+                break;
+
+
+        }
+
+        return ongratulations;
     }
 
 

@@ -24,11 +24,7 @@ public class OnlineShop {
     public static List<Order> getOrderList() {
         return orderList;
     }
-//    public OnlineShop(List<Customer> customerList, List<Product> productList, List<Order> orderList) {
-//        this.customerList = customerList;
-//        this.productList = productList;
-//        this.orderList = orderList;
-//    }
+
 
     public static Order buyProduct(String customerFIO, String productName, String quantityOfProducts) throws QuantityException, CustomerNotExistException, ProductNotExistException {
         Customer currentCustomer = null;
@@ -59,4 +55,5 @@ public class OnlineShop {
         return new Order(currentCustomer, currentProduct, currentQuantity);
 
     }
+
 }

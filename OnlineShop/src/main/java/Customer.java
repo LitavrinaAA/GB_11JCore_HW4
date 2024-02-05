@@ -6,6 +6,7 @@ public class Customer {
     private String FIO;
     private LocalDate dateOfBirth;
     private String phone;
+    private Gender gender;
 
     public Customer(String FIO, LocalDate dateOfBirth, String phone) {
         this.FIO = FIO;
